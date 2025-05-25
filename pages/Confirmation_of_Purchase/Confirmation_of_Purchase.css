@@ -1,0 +1,63 @@
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0; 
+  text-align: center;
+  width: 100%;
+}
+
+.confirmation-message-container {
+  background-image: url('https://ide.code.fun/api/image?token=682dbfbfdefdb100111f8d3a&name=8fd27956850e8edb44380aaf7f33cca3.png');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 150px 40px;
+  width: 100%;
+  max-width: 1728px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: 100vh; 
+  height: auto;
+  margin: 0; 
+  position: relative;
+}
+
+.confirmation-title {
+  color: rgb(255, 255, 255);
+  font-size: 80px;
+  font-family: Jost;
+  font-weight: 900;
+  line-height: 1.1;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); /* 增强文字阴影 */
+  z-index: 2; 
+  position: relative; /* 添加相对定位 */
+}
+
+.confirmation-button {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 25px 50px;
+  font-size: 28px;
+  font-family: Jost;
+  font-weight: 300;
+  line-height: 1;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.confirmation-image {
+  width: 100%;
+  max-width: 1728px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

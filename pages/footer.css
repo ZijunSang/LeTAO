@@ -1,95 +1,56 @@
-.footer-container { /* Was .group_3 */
-    margin-top: 51px;
-    padding-left: 21px; 
-    gap: 20px; 
-    /* display: flex; /* Assumed to be on the HTML element */
-    /* justify-content: center; /* Assumed to be on the HTML element */
-    /* align-items: center; /* Assumed to be on the HTML element */
-  }
-  
-  /* Delivery Policy - Item 0 */
-  .footer-item-0 { /* Was .text-wrapper */
-    height: 20px;
-    border-bottom: solid 1px rgb(0, 0, 0);
-  }
-  
-  .footer-item-0-text { /* Was .font for Delivery Policy */
-    font-size: 20px;
-    font-family: Jost;
-    font-weight: 300;
-    color: rgb(0, 0, 0);
-    /* line-height will be handled by the general rule later or can be set here */
-  }
-  
-  /* Return & Refund - Item 1 */
-  .footer-item-1 { /* Was .group_4 */
-    margin-left: 44px; 
-  }
-  
-  .footer-item-1-text { /* Was .font_2 for Return & Refund */
-    font-size: 20px;
-    font-family: Jost;
-    font-weight: 300;
-    color: rgb(0, 0, 0);
-    /* line-height will be handled by the general rule later or can be set here */
-  }
-  
-  .footer-item-1-divider { /* Was .divider */
-    background-color: rgb(0, 0, 0);
-    width: 132.5px;
-    height: 1px;
-    margin-top: 2px; 
-  }
-  
-  /* Privacy Policy - Item 2 */
-  .footer-item-2 { /* Was .group_5 */
-    margin-left: 27px; 
-  }
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-top: 50px;
+    margin-bottom: 5px;
+    gap: 50px;
+    padding: 0 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-  .footer-item-2-text { /* Was .font for Privacy Policy - style copied from original .font */
-    font-size: 20px;
-    font-family: Jost;
-    font-weight: 300;
-    color: rgb(0, 0, 0);
-    /* line-height will be handled by the general rule later or can be set here */
-  }
-  
-  .footer-item-2-divider { /* Was .divider_2 */
+.footer-item-divider {
     background-color: rgb(0, 0, 0);
-    width: 110.5px;
+    width: 100%;
     height: 1px;
-    margin-top: 2px; 
-  }
-  
-  /* Contact Us - Item 3 */
-  .footer-item-3 { /* Was .text-wrapper_5 */
-    margin-left: 30px; 
+    margin-top: 2px;
+}
+
+.footer-item{
     border-bottom: solid 1.5px rgb(0, 0, 0);
-  }
-  
-  .footer-item-3-text { /* Was .font_3 for Contact Us */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-item-text {
+    color: rgb(0, 0, 0);
     font-size: 20px;
     font-family: Jost;
     font-weight: 300;
-    color: rgb(0, 0, 0);
-    /* line-height will be handled by the general rule later or can be set here */
-  }
-  
-  .footer-item-3-text-detail { /* Was .text_6 for Contact Us specific line-height */
-    /* This class is primarily for the line-height. Other font styles come from .footer-item-3-text if applied to the same element */
-    line-height: 14.5px; 
-  }
-  
-  /* General line-height overrides for footer text elements */
-  .footer-container .footer-item-0-text,
-  .footer-container .footer-item-1-text,
-  .footer-container .footer-item-2-text,
-  .footer-container .footer-item-3-text {
-    line-height: 20px; 
-  }
+    line-height: 20px;
+    text-align: center;
+    flex-grow: 1;
+}
 
-  /* Ensure the specific line-height for Contact Us detail is applied if it's a separate class or element */
-  /* If .footer-item-3-text-detail is applied on the same span as .footer-item-3-text, its line-height will take precedence. */
-  .footer-container .footer-item-3-text-detail {
-     line-height: 14.5px; /* Corrected syntax error and ensured specificity */
-  }
+
+@media (max-width: 768px) {
+    .footer-container {
+        gap: 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-item{
+        margin-left: 0;
+        width: auto;
+    }
+
+    .footer-item-divider {
+        width: 100%;
+    }
+}

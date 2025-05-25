@@ -8,9 +8,9 @@
   <title>codefun</title>
   <link rel="stylesheet" href="../../index.css" />
   <link rel="stylesheet" href="../head.css" />
-  <link rel="stylesheet" href="./Homepage.css" />
   <link rel="stylesheet" href="../footer.css" />
-  <script type="text/javascript" src="./Homepage.js"></script>
+  <link rel="stylesheet" href="./Check_out_page.css" />
+  <script type="text/javascript" src="./Check_out_page.js"></script>
 </head>
 
 <body>
@@ -42,16 +42,70 @@
       </div>
     </div>
 
-    <div class="flex-col main-content">
-      <img class="main_image" src="../../src/imgs/homepage_teaser.png" />
-    </div>
+    <span class="path">Home/Check Out</span>
+    <div class="checkout-content">
 
-    <div class="flex-row equal-division">
-      <img class="main_image equal-division-item" src="../../src/imgs/softserving.png" />
-      <img class="main_image equal-division-item ml-63-5" src="../../src/imgs/double.png" />
-    </div>
-    <img class="main_image" src="../../src/imgs/tail.png" />
+      <div class="checkout-form">
+        <h2 class="checkout-title">Express Checkout</h2>
+        <button class="btn-shoppay">ShopPAY</button>
+        <div class="or-separator"><span>or</span></div>
 
+        <h3 class="section-title">Contact</h3>
+        <input type="email" placeholder="Please Enter Your Email" class="input-full" />
+        <label class="checkbox-label">
+          <input type="checkbox" /> Email me with news and offers
+        </label>
+        <div class="input-row">
+          <input type="text" placeholder="First Name" />
+          <input type="text" placeholder="Last Name" />
+        </div>
+        <div class="input-full with-icon">
+          <input type="text" placeholder="Address" />
+          <span class="icon-search"></span>
+        </div>
+        <div class="input-row">
+          <input type="text" placeholder="City" />
+          <input type="text" placeholder="State/Territory" />
+          <input type="text" placeholder="Postcode" />
+        </div>
+        <input type="tel" placeholder="Phone" class="input-full" />
+        <label class="checkbox-label">
+          <input type="checkbox" /> Text me with news and offers
+        </label>
+
+        <h3 class="section-title">Payment</h3>
+        <div class="payment-widget">
+          <img src="../../src/logo/payment.png" alt="Credit card form" />
+        </div>
+
+        <button class="btn-paynow">Pay Now</button>
+      </div>
+
+      <div class="checkout-summary">
+        <div class="summary-item">
+          <img src="../../src/logo/cheesecake.png" alt="Fromage Double" />
+          <div class="item-info">
+            <span class="name">Fromage Double</span>
+            <span class="price">$43.99</span>
+          </div>
+          <span class="qty">X1</span>
+        </div>
+        <div class="summary-item">
+          <img src="../../src/logo/chocolate.png" alt="Chocolate Double" />
+          <div class="item-info">
+            <span class="name">Chocolate Double</span>
+            <span class="price">$43.99</span>
+          </div>
+          <span class="qty">X2</span>
+        </div>
+
+        <div class="summary-totals">
+          <div><span>Subtotal</span><span>$107.97</span></div>
+          <div><span>Shipping</span><span>$0.00</span></div>
+          <div class="total-row"><span>Total</span><span>$107.97</span></div>
+        </div>
+      </div>
+    </div>
     <div class="flex-row footer-container">
       <div class="flex-col footer-item">
         <a href="../content_pages/Delivery_Policy_Page.html"><span class="footer-item-text">Delivery Policy</span> </a>
@@ -70,7 +124,6 @@
       </div>
     </div>
   </div>
-
 </body>
 
 </html>

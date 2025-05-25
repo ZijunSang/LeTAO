@@ -5,12 +5,11 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>codefun</title>
+  <title>LeTAO — Chocolate Double</title>
   <link rel="stylesheet" href="../../index.css" />
+  <link rel="stylesheet" href="Product_Detail_Page.css" />
   <link rel="stylesheet" href="../head.css" />
-  <link rel="stylesheet" href="./Homepage.css" />
   <link rel="stylesheet" href="../footer.css" />
-  <script type="text/javascript" src="./Homepage.js"></script>
 </head>
 
 <body>
@@ -42,15 +41,54 @@
       </div>
     </div>
 
-    <div class="flex-col main-content">
-      <img class="main_image" src="../../src/imgs/homepage_teaser.png" />
-    </div>
+    <main class="product-detail">
+      <div class="images">
+        <img
+          src="https://ide.code.fun/api/image?token=682dbfbfdefdb100111f8d3a&name=fafbc2b5c45ef0bcc097d6d9b9148f59.png"
+          alt="Chocolate Double" />
+        <img
+          src="https://ide.code.fun/api/image?token=682dbfbfdefdb100111f8d3a&name=edbdf0d21567eca8425609d0724d9ad1.png"
+          alt="Slice view" />
+        <img
+          src="https://ide.code.fun/api/image?token=682dbfbfdefdb100111f8d3a&name=f57b55684e7da9f40887381e58f0764c.png"
+          alt="Branded shot" />
+      </div>
+      <div class="details">
+        <h1>Chocolate Double</h1>
+        <p class="price">$43.99</p>
 
-    <div class="flex-row equal-division">
-      <img class="main_image equal-division-item" src="../../src/imgs/softserving.png" />
-      <img class="main_image equal-division-item ml-63-5" src="../../src/imgs/double.png" />
-    </div>
-    <img class="main_image" src="../../src/imgs/tail.png" />
+        <p>
+          Pickup available at
+          <strong>Melbourne 238 Swanston Street Store</strong>.
+          Usually ready in 1 hour.
+        </p>
+        <a href="#" class="check-availability">Check availability in other stores</a>
+
+        <p>Chocolate-lovers look no further.</p>
+        <p>
+          The Double Chocolat is an elegant combination of two classic ingredients. The slight bitterness of the
+          66% cacao Spanish chocolate is perfectly balanced by the delicate sweetness and smooth texture of the
+          Hokkaido cream and Mascarpone cheese.
+        </p>
+        <p>Enjoy the superb creamy texture and richness.</p>
+
+        <p><strong>Net Weight:</strong> 330g (Diameter: 12CM)</p>
+        <p>
+          <strong>Ingredients:</strong>
+          Fresh cream (contains cows’ milk), Chocolate, Mascarpone cheese, Cocoa powder, Cream cheese, Whole
+          eggs, Sugar, Wheat flour (contains gluten), Gelatin, Stabiliser (Bean gum/E410), Emulsifier
+          (Lecithin/E322), Soy.
+        </p>
+        <p>
+          <strong>Allergen Information:</strong>
+          This product contains wheat, gluten, soy, egg, and milk.
+        </p>
+
+        <p class="origin">MADE IN HOKKAIDO, JAPAN WITH LOVE.</p>
+
+        <button class="btn-add">Add to Cart</button>
+      </div>
+    </main>
 
     <div class="flex-row footer-container">
       <div class="flex-col footer-item">
@@ -70,7 +108,6 @@
       </div>
     </div>
   </div>
-
 </body>
 
 </html>

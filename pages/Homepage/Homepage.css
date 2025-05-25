@@ -1,130 +1,32 @@
-.ml-63-5 {
-  margin-left: 63.5px;
+.main_image {
+  width: 100%; /* Make the image take up 50% of its container width */
+  height: auto; /* Maintain the aspect ratio */
+  display: block;
+  margin-left: auto; 
+  margin-right: auto; 
 }
-.page {
-  padding: 22.5px 0 41px;
-  background-color: rgb(255, 255, 255);
-  width: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
-  height: 100%;
+
+.main-content{
+    display: flex; 
+    flex-wrap: wrap; 
+    width: 100%;
+    max-width: 1728px; 
+    margin-left: auto; 
+    margin-right: auto; 
 }
-.group {
-  padding-left: 34px;
-  padding-right: 19px;
-}
-.text {
-  color: rgb(0, 0, 0);
-  font-size: 48px;
-  font-family: Jost;
-  font-weight: 300;
-  line-height: 35.5px;
-}
-.text-wrapper_2 {
-  border-bottom: solid 1px rgb(0, 0, 0);
-}
-.font_3 {
-  font-size: 20px;
-  font-family: Jost;
-  line-height: 14px;
-  font-weight: 300;
-  color: rgb(0, 0, 0);
-}
-.text-wrapper {
-  height: 20px;
-  border-bottom: solid 1px rgb(0, 0, 0);
-}
-.font {
-  font-size: 20px;
-  font-family: Jost;
-  line-height: 20px;
-  font-weight: 300;
-  color: rgb(0, 0, 0);
-}
-.font_2 {
-  font-size: 20px;
-  font-family: Jost;
-  line-height: 16px;
-  font-weight: 300;
-  color: rgb(0, 0, 0);
-}
-.text_2 {
-  line-height: 16px;
-}
-.text-wrapper_3 {
-  height: 19px;
-  border-bottom: solid 1px rgb(0, 0, 0);
-}
-.font_4 {
-  font-size: 20px;
-  font-family: Jost;
-  line-height: 19px;
-  font-weight: 300;
-  color: rgb(0, 0, 0);
-}
-.text-wrapper_4 {
-  height: 18.5px;
-  border-bottom: solid 1px rgb(0, 0, 0);
-}
-.text_3 {
-  line-height: 18.5px;
-}
-.image {
-  width: 35px;
-  height: 35px;
-}
-.group_2 {
-  margin-top: 10px;
-}
-.section {
-  padding: 11px 19px 6px 209px;
-  background-color: rgb(231, 231, 231);
-}
-.text_4 {
-  color: rgb(0, 0, 0);
-  font-size: 16px;
-  font-family: Jost;
-  font-weight: 300;
-  line-height: 16px;
-}
-.section_2 {
-  padding: 7px 8px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 4999.5px;
-  overflow: hidden;
-  width: 118px;
-  height: 23.5px;
-  border-left: solid 0.5px rgb(217, 217, 217);
-  border-right: solid 0.5px rgb(217, 217, 217);
-  border-top: solid 0.5px rgb(217, 217, 217);
-  border-bottom: solid 0.5px rgb(217, 217, 217);
-}
-.text_5 {
-  color: rgb(30, 30, 30);
-  font-size: 8px;
-  font-family: Jost;
-  font-weight: 300;
-  line-height: 6.5px;
-}
-.image_2 {
-  width: 8px;
-  height: 8px;
-}
-.image_3 {
-  width: 100vw;
-  height: 49.537vw;
-}
+
 .equal-division {
-  margin-top: 30px;
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+  width: 100%;
+  max-width: 1728px; 
+  margin-left: auto; 
+  margin-right: auto; 
 }
-.image_4 {
-  flex: 1 1 400.5px;
-}
+
 .equal-division-item {
-  height: 264px;
-}
-.image_5 {
-  margin-top: 29.5px;
-  width: 100vw;
-  height: 55.9028vw;
+  flex: 1 1 calc(50% ); /* Each item takes up 50% of the container width, minus some gap */
+  max-width: calc(50% ); /* Limit the maximum width */
+  height: auto; /* Maintain aspect ratio */
 }
