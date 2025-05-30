@@ -5,14 +5,17 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>codefun</title>
+  <title>Search Results</title>
   <link rel="stylesheet" href="../../index.css" />
+  <link rel="stylesheet" href="../head.css" />
+  <link rel="stylesheet" href="../footer.css" />
+  <link rel="stylesheet" href="../product.css" />
   <link rel="stylesheet" href="./Search_Page.css" />
   <script type="text/javascript" src="./Search_Page.js"></script>
 </head>
 
 <body>
-  <div class="page">
+  <div class="page-container">
     <div class="flex-row justify-between items-center header-container">
       <a href="../Homepage/Homepage.html" class="header-logo-link"><span class="header-logo">LeTAO</span></a>
       <div class="flex-col justify-start nav-link-wrapper"><a href="../Homepage/Homepage.html"
@@ -25,139 +28,128 @@
           class="nav-link-anchor"><span class="nav-link-text">Signature Creations</span></a></div>
       <div class="flex-col justify-start nav-link-wrapper"><a href="../product_pages/Pastry_PAGE.html"
           class="nav-link-anchor"><span class="nav-link-text">Pastry</span></a></div>
-      <a href="../Shopping_Cart_Page/Shopping_Cart_Page.html"><img class="header-icon"
-          src="../../src/logo/cart.png" /></a>
-      <a href="../login/Login_Page.html"><img class="header-icon" src="../../src/logo/account.png" /></a>
+      <a href="../Shopping_Cart_Page/Shopping_Cart_Page.html"><img class="header-icon" src="../../src/logo/cart.png"
+          alt="Shopping Cart" /></a>
+      <a href="../login/Login_Page.html"><img class="header-icon" src="../../src/logo/account.png" alt="Account" /></a>
     </div>
 
     <div class="flex-col banner-container">
       <div class="flex-row justify-between items-center banner-content">
         <span class="banner-text">Order before 2:00pm For Next-Day Home Delivery</span>
-        <div class="flex-row search-container"><a href="../Search_Page/Search_Page.html">
-            <span class="search-text">Search...</span></a>
-          <img class="shrink-0 search-icon" src="../../src/logo/x.png" />
+        <div class="flex-row search-container">
+          <a href="../Search_Page/Search_Page.html"><span class="search-text">Search...</span></a>
+          <img class="shrink-0 search-icon" src="../../src/logo/x.png" alt="Clear Search" />
         </div>
       </div>
     </div>
-    <div class="flex-row justify-between items-center self-start group_2">
-      <span class="font_5 text_7">Home/Search “Cake”</span>
-      <div class="flex-col group_3">
-        <div class="flex-row items-center section">
-          <span class="text_6">Cake</span>
-          <img class="shrink-0 image_2 ml-214-5"
-            src="https://ide.code.fun/api/image?token=682dbfbfdefdb100111f8d3a&name=80ea3f81fa31a1c46977a75bcf34b667.png" />
+
+    <div class="path">
+      <span class="path_font">Home / Search "cake"</span>
+    </div>
+    <div class="flex-row  search-term-box">
+      <span class="current-search-term">Cake</span>
+      <img class="clear-search-icon" src="../../src/logo/search.png" alt="Clear search term" />
+    </div>
+    <div class="flex-col self-center product-container">
+      <span class="product-page-title-small ">Showing 6 results for “Cake”</span>
+      <div class="product-grid">
+        <div class="product-item">
+          <div class="product-card">
+            <div class="product-image-container">
+              <img class="product-image" src="../../src/logo/POST_21_JUNE_-_GATEAU_PUDDING_TIRAMISU_SLIDE_1.jpg" />
+              <div class="product-label"><span class="product-label-text">MEL & BNE Only</span></div>
+            </div>
+            <div class="product-info">
+              <div class="product-details">
+                <span class="product-name">Gateau Pudding Tiramisu</span>
+                <span class="product-price">$48.99</span>
+              </div>
+              <img class="product-add-button" src="../../src/logo/plus.png" alt="Add to cart" />
+            </div>
+          </div>
         </div>
-        <span class="text_8 mt-97">Showing 6 results for “Cake”</span>
+
+        <div class="product-item">
+          <div class="product-card">
+            <div class="product-image-container">
+              <img class="product-image"
+                src="../../src/logo/POST_MAY_19_-_FRAISE_DOUBLE_WHOLE_CAKE_CAROUSEL_SLIDE_1.jpg" />
+              <div class="product-label"><span class="product-label-text">MEL & BNE Only</span></div>
+            </div>
+            <div class="product-info">
+              <div class="product-details">
+                <span class="product-name">Strawberry Double Hokkaido Ichigo</span>
+                <span class="product-price">$48.99</span>
+              </div>
+              <img class="product-add-button" src="../../src/logo/plus.png" alt="Add to cart" />
+            </div>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <div class="product-card">
+            <div class="product-image-container">
+              <img class="product-image" src="../../src/logo/cheesecake.png" />
+            </div>
+            <div class="product-info">
+              <div class="product-details">
+                <span class="product-name">Fromage Double</span>
+                <span class="product-price">$43.99</span>
+              </div>
+              <img class="product-add-button" src="../../src/logo/plus.png" alt="Add to cart" />
+            </div>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <div class="product-card">
+            <div class="product-image-container">
+              <img class="product-image" src="../../src/logo/POSTMARCH31-YUKIICHIGOCAROUSELSLIDE2.jpg" />
+            </div>
+            <div class="product-info">
+              <div class="product-details">
+                <span class="product-name">Yuki Ichigo</span>
+                <span class="product-price">$48.99</span>
+              </div>
+              <img class="product-add-button" src="../../src/logo/plus.png" alt="Add to cart" />
+            </div>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <div class="product-card">
+            <div class="product-image-container">
+              <img class="product-image" src="../../src/logo/peach.png" />
+            </div>
+            <div class="product-info">
+              <div class="product-details">
+                <a href="#"><span class="product-name">Peche Blanche Earl Gray</span></a>
+                <span class="product-price">$48.99</span>
+              </div>
+              <img class="product-add-button" src="../../src/logo/plus.png" alt="Add to cart" />
+            </div>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <div class="product-card">
+            <div class="product-image-container">
+              <a href="#">
+                <img class="product-image" src="../../src/logo/red.png" alt="Chocolate Double" />
+              </a>
+            </div>
+            <div class="product-info">
+              <div class="product-details">
+                <a href="#"><span class="product-name">Chocolate Double</span></a>
+                <span class="product-price">$43.99</span>
+              </div>
+              <img class="product-add-button" src="../../src/logo/plus.png" alt="Add to cart" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="grid">
-      <div class="flex-col justify-start relative grid-item">
-        <div class="flex-row justify-between items-center relative section_3">
-          <div class="group_4">
-            <span class="font_5">
-              Gateau Pudding Tiramisu
-              <br />
-              <br />
-              <br />
-            </span>
-            <span class="font_7">$48.99</span>
-          </div>
-          <img class="image_3"
-            src="https://ide.code.fun/api/image?token=682dbfbfdefdb100111f8d3a&name=47983fbf196498eb739eca3f0308d30d.png" />
-        </div>
-        <div class="flex-col justify-start items-end text-wrapper_6 pos">
-          <span class="font_6 text_9">MEL & BNE Only</span>
-        </div>
-      </div>
-      <div class="flex-col justify-start relative grid-item">
-        <div class="flex-row items-center relative section_3">
-          <div class="flex-1 group_4">
-            <span class="font_5">
-              Strawberry Double Hokkaido Ichigo
-              <br />
-              <br />
-              <br />
-            </span>
-            <span class="font_7">$48.99</span>
-          </div>
-          <img class="shrink-0 image_3"
-            src="https://ide.code.fun/api/image?token=682dbfbfdefdb100111f8d3a&name=47983fbf196498eb739eca3f0308d30d.png" />
-        </div>
-        <div class="flex-col justify-start section_2 pos_2">
-          <div class="flex-col justify-start items-end text-wrapper_7">
-            <span class="font_6 text_10">MEL & BNE Only</span>
-          </div>
-        </div>
-      </div>
-      <div class="flex-col justify-start relative grid-item_2">
-        <div class="flex-row justify-between items-center relative section_5">
-          <div class="group_4">
-            <span class="font_5">
-              Fromage Double
-              <br />
-              <br />
-              <br />
-            </span>
-            <span class="font_7">$43.99</span>
-          </div>
-          <img class="image_3"
-            src="https://ide.code.fun/api/image?token=682dbfbfdefdb100111f8d3a&name=47983fbf196498eb739eca3f0308d30d.png" />
-        </div>
-        <img class="image_4 pos_3"
-          src="https://ide.code.fun/api/image?token=682dbfbfdefdb100111f8d3a&name=55a1ad8f18fd9aecd6b35d1c1b938af0.png" />
-      </div>
-      <div class="flex-col justify-start relative grid-item_3">
-        <div class="flex-row justify-between items-center relative section_4">
-          <div class="group_4">
-            <span class="font_5">
-              Gateau Pudding Tiramisu
-              <br />
-              <br />
-              <br />
-            </span>
-            <span class="font_7">$48.99</span>
-          </div>
-          <img class="image_3"
-            src="https://ide.code.fun/api/image?token=682dbfbfdefdb100111f8d3a&name=47983fbf196498eb739eca3f0308d30d.png" />
-        </div>
-        <img class="image_4 pos_4"
-          src="https://ide.code.fun/api/image?token=682dbfbfdefdb100111f8d3a&name=a63b739785c94de2369e41743550bf93.png" />
-      </div>
-      <div class="flex-col justify-start relative grid-item">
-        <div class="flex-row justify-between items-center relative section_6">
-          <div class="group_4">
-            <span class="font_5">
-              Gateau Pudding Tiramisu
-              <br />
-              <br />
-              <br />
-            </span>
-            <span class="font_7">$48.99</span>
-          </div>
-          <img class="image_3"
-            src="https://ide.code.fun/api/image?token=682dbfbfdefdb100111f8d3a&name=47983fbf196498eb739eca3f0308d30d.png" />
-        </div>
-        <img class="image_4 pos_5"
-          src="https://ide.code.fun/api/image?token=682dbfbfdefdb100111f8d3a&name=2647277aee8bed1d60fc24352923b14d.png" />
-      </div>
-      <div class="flex-col justify-start relative grid-item">
-        <div class="flex-row justify-between items-center relative section_4">
-          <div class="group_4">
-            <span class="font_5">
-              Chocolate Double
-              <br />
-              <br />
-              <br />
-            </span>
-            <span class="font_7">$43.99</span>
-          </div>
-          <img class="image_3"
-            src="https://ide.code.fun/api/image?token=682dbfbfdefdb100111f8d3a&name=47983fbf196498eb739eca3f0308d30d.png" />
-        </div>
-        <img class="image_4 pos_6"
-          src="https://ide.code.fun/api/image?token=682dbfbfdefdb100111f8d3a&name=97911ac709d83428c5e0a7861101ef8b.png" />
-      </div>
-    </div>
+
 
     <div class="flex-row footer-container">
       <div class="flex-col footer-item">
@@ -169,7 +161,7 @@
       </div>
       <div class="flex-col footer-item">
         <a href="../content_pages/Privacy_Policy.html"><span class="footer-item-text">Privacy Policy</span> </a>
-        <div class="shrink-0 footer-item-divider"></div>
+        <div class="footer-item-divider"></div>
       </div>
       <div class="flex-col  footer-item">
         <a href="../Contact_Us_Page/Contact_Us_Page.html">

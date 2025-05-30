@@ -1,23 +1,24 @@
 .header-container {
-    padding-top: 10px;
+    padding-top: 30px;
     padding-left: 34px;
     padding-right: 19px;
   }
   
   .header-logo {
     color: rgb(0, 0, 0);
-    font-size: clamp(24px, 5vw, 48px); /* 使用clamp实现响应式字体大小 */
+    font-size: clamp(24px, 5vw, 48px);
     font-family: Jost;
     font-weight: 300;
-    line-height: 1.2; /* 使用相对行高 */
+    line-height: 1.2; 
   }
 
 .nav-link-wrapper {
 border-bottom: solid 1.5px rgb(0, 0, 0);
+
 }
 
 .nav-link-text {
-  font-size: clamp(14px, 2vw, 20px); 
+  font-size: clamp(16px, 2vw, 32px); 
   font-family: Jost;
   line-height: 1.2; 
   font-weight: 300;
@@ -30,7 +31,7 @@ border-bottom: solid 1.5px rgb(0, 0, 0);
   }
 
 .banner-container {
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 .banner-content {
@@ -43,10 +44,10 @@ border-bottom: solid 1.5px rgb(0, 0, 0);
 
 .banner-text {
   color: rgb(0, 0, 0);
-  font-size: 16px;
+  font-size: 20px;
   font-family: Jost;
   font-weight: 300;
-  line-height: 16px;
+  line-height: 20px;
   text-align: center;
   flex-grow: 1; 
 }
@@ -76,4 +77,20 @@ border-bottom: solid 1.5px rgb(0, 0, 0);
     width: clamp(8px, 1vw, 10px);
     height: clamp(8px, 1vw, 10px);
     margin-left: auto; 
+  }
+
+  .selected-element {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1),
+                0 10px 20px rgba(0, 0, 0, 0.15),
+                0 15px 25px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .selected-element:focus,
+  .selected-element:active,
+  .selected-element.active {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(240, 240, 240, 0.7));
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15),
+                0 15px 30px rgba(0, 0, 0, 0.2),
+                0 20px 40px rgba(0, 0, 0, 0.25);
   }

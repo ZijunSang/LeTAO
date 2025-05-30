@@ -1,62 +1,61 @@
 /* — Product Detail — */
 
-/* 1. 主容器：去掉固定 gap，保证两列刚好各占一半 */
 .product-detail {
   display: flex;
-  flex-wrap: nowrap;      /* 不换行 */
+  flex-wrap: nowrap;    
   padding: 40px;
 }
 
-/* 2. 图片区与详情区各占 50% */
 .images,
 .details {
-  flex: 1 1 50%;          /* basis 为 50% */
+  flex: 1 1 50%;       
   max-width: 50%;
-  box-sizing: border-box;  /* 内边距不影响宽度计算 */
+  box-sizing: border-box;  
+  padding-top: 15px;
 }
 
-/* 3. 图片区：横向排列，三等分 */
 .images {
   display: flex;
-  flex-direction: column;  /* 纵向排列 */
-  gap: 16px;              /* 图间距 */
+  flex-direction: column;  
+  gap: 20px;             
 }
 .images img {
-  width: 100%;            /* 图片宽度占满容器 */
+  width: 100%;           
   height: auto;
   object-fit: cover;
 }
 
-/* 4. 文字区：保持原有排版 */
 .details {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding-left: 40px;    /* 如果想要左右有留白 */
+  padding-left: 40px;   
 }
 
-/* —— 以下保持原有样式 —— */
 .details h1 {
-  font-size: 32px;
+  font-size: 64px;
   font-weight: 300;
   margin: 0;
 }
 .price {
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 300;
   margin: 0;
 }
 .details p {
   margin: 0;
   line-height: 1.6;
+  font-size: 40px;
+  margin-bottom: 30px;
+  font-weight: 300;
 }
 .check-availability {
-  font-size: 20px;
+  font-size: 40px;
   font-weight: 300;
   text-decoration: none;
   border-bottom: 1px solid #000;
   align-self: start;
   padding-bottom: 2px;
+  padding-top: 20px;
 }
 .check-availability:hover {
   opacity: 0.8;
@@ -65,7 +64,7 @@
   font-weight: 600;
 }
 .origin {
-  margin-top: 16px;
+  margin-top: 40px;
   font-weight: 600;
 }
 .btn-add {
@@ -73,7 +72,7 @@
   padding: 16px;
   background: #000;
   color: #fff;
-  font-size: 20px;
+  font-size: 40px;
   border: none;
   cursor: pointer;
   width: 100%;
@@ -83,8 +82,6 @@
   opacity: 0.9;
 }
 
-/* — Responsive — */
-/* 在窄屏(<768px)下仍恢复原来的上下结构 */
 @media (max-width: 768px) {
   .product-detail {
     flex-direction: column;

@@ -10,9 +10,9 @@
     display: flex; 
     flex-wrap: wrap; 
     width: 100%;
-    max-width: 1728px; 
     margin-left: auto; 
     margin-right: auto; 
+    padding-bottom: 50px;
 }
 
 .equal-division {
@@ -20,13 +20,20 @@
   flex-wrap: wrap; 
   justify-content: space-between; 
   width: 100%;
-  max-width: 1728px; 
   margin-left: auto; 
   margin-right: auto; 
+  padding-bottom: 50px;
+
 }
 
 .equal-division-item {
-  flex: 1 1 calc(50% ); /* Each item takes up 50% of the container width, minus some gap */
-  max-width: calc(50% ); /* Limit the maximum width */
-  height: auto; /* Maintain aspect ratio */
+  flex: 0 0 calc(50%-40px); 
+  max-width: calc(50% - 40px); 
+  min-width: 45%;
+  height: auto; 
+  margin: 0; 
+}
+
+.equal-division {
+  justify-content: space-between; /* Already set, but this ensures items are pushed to the edges */
 }
