@@ -83,7 +83,7 @@
 
         <p class="origin">MADE IN HOKKAIDO, JAPAN WITH LOVE.</p>
 
-        <button class="btn-add">Add to Cart</button>
+        <button class="btn-add" onclick="addFromageToCart()">Add to Cart</button>
       </div>
     </main>
 
@@ -106,6 +106,28 @@
       </div>
     </div>
   </div>
+
+  <script>
+    function addFromageToCart() {
+      let cart = JSON.parse(localStorage.getItem('letaoCart')) || { items: [], total: 0 };
+      
+      const existingItemIndex = cart.items.findIndex(item => item.name === "Fromage Double");
+      
+      if (existingItemIndex >= 0) {
+        cart.items[existingItemIndex].quantity += 1;
+      } else {
+        cart.items.push({
+          id: Date.now(), 
+          name: "Fromage Double",
+          price: 43.99,
+          quantity: 1,
+          image: "../../src/logo/cheesecake.png"
+        });
+      }
+      
+      localStorage.setItem('letaoCart', JSON.stringify(cart));      
+    }
+  </script>
 </body>
 
 </html>

@@ -81,7 +81,7 @@
 
         <p class="origin">MADE IN HOKKAIDO, JAPAN WITH LOVE.</p>
 
-        <button class="btn-add">Add to Cart</button>
+        <button class="btn-add" onclick="window.location.href='../Shopping_Cart_Page/Shopping_Cart_Page.html'">Add to Cart</button>
       </div>
     </main>
 
@@ -103,6 +103,27 @@
       </div>
     </div>
   </div>
+  <script>
+    function addFromageToCart() {
+      let cart = JSON.parse(localStorage.getItem('letaoCart')) || { items: [], total: 0 };
+      
+      const existingItemIndex = cart.items.findIndex(item => item.name === "Milk Roll");
+      
+      if (existingItemIndex >= 0) {
+        cart.items[existingItemIndex].quantity += 1;
+      } else {
+        cart.items.push({
+          id: Date.now(), 
+          name: "",
+          price: 43.99,
+          quantity: 1,
+          image: "../../src/logo/jersey_mild_roll.png"
+        });
+      }
+      
+      localStorage.setItem('letaoCart', JSON.stringify(cart));      
+    }
+  </script>
 </body>
 
 </html>

@@ -98,7 +98,8 @@
         </div>
         <label class="self-start postcode-input-label">Please enter your postcode</label>
         <div class="flex-col self-start postcode-checker">
-          <div class="flex-col justify-start items-end postcode-input-field">
+          <div class="flex-row  postcode-input-field">
+            <input type="text" class="postcode-input" placeholder="Enter postcode" />
             <img class="postcode-search-action-icon" src="../../src/logo/search.png" />
           </div>
           <div class="postcode-checker-message">
@@ -124,8 +125,9 @@
     <div class="self-stretch order-totals-display">
       <span class="final-total-amount">Total $107,97<br /></span>
       <span class="final-total-details">Tax included. Shipping Calculated at Checkout</span>
-      <button class="flex-col checkout-button-wrapper" onclick="window.location.href='../Check_out_page/Check_out_page.html'">
-          <span class = "checkout-button-caption">Check Out </span>
+      <button class="flex-col checkout-button-wrapper"
+        onclick="window.location.href='../Check_out_page/Check_out_page.html'">
+        <span class="checkout-button-caption">Check Out </span>
       </button>
     </div>
 

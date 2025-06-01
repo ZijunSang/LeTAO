@@ -169,7 +169,16 @@
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-
+.postcode-input{
+  width: 100%;
+  font-size: 16px;
+  font-family: Jost;
+  font-weight: 300;
+  color: #333;
+  background: none;
+  border: none;
+  padding-left: 20px;
+}
 .postcode-search-action-icon,
 .delivery-date-action-icon {
   width: 24px;
