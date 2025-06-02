@@ -1,5 +1,3 @@
-
-
 .main-content {
   display: flex;
   flex-direction: column;
@@ -59,4 +57,58 @@
 .social-icons img {
   height: 60px;
   width: auto;
+}
+
+@media (max-width: 390px) {
+  .main-content {
+    padding: 30px 15px;
+  }
+  
+  .main-content h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+  
+  .input-box,
+  .textarea-box {
+    font-size: 16px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+  }
+  
+  .textarea-box {
+    height: 150px;
+  }
+  
+  .submit-button {
+    padding: 12px 0;
+    font-size: 18px;
+    width: 160px;
+  }
+  
+  .social-invite {
+    margin-top: 40px;
+    font-size: 16px;
+  }
+  
+  .social-icons {
+    gap: 25px;
+    margin: 15px 0 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .social-icons img {
+    height: 36px;
+  }
+  
+  form {
+    width: 100%;
+  }
+  
+
+  .input-box {
+    min-height: 45px;
+  }
 }
