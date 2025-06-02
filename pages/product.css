@@ -95,6 +95,7 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+    max-width: 75%; /* 限制宽度，为添加按钮留出空间 */
 }
 
 .product-name {
@@ -103,6 +104,12 @@
     line-height: 32px;
     font-weight: 300;
     color: rgb(0, 0, 0);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* 最多显示两行 */
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
 }
 
 .product-price {
@@ -118,29 +125,71 @@
     height: clamp(30px, 3vw, 43.5px);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 390px) {
+    .product-page-title {
+        font-size: 28px;
+        margin-top: 40px;
+        line-height: 32px;
+        padding-bottom: 20px;
+    }
+    
+    .product-page-title-small {
+        font-size: 22px;
+        margin-top: 40px;
+        line-height: 28px;
+    }
+    
+    .product-container {
+        width: 90%;
+    }
+    
     .product-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 10px;
         width: 100%;
-        gap: 24px;
+        margin-top: 30px;
     }
-
-    .product-item {
-        width: 100%;
-    }
-
-    .product-image,
+    
     .product-info {
-        width: 100%;
+        padding: 25px 6px 6px;
+        margin-top: -30px;
+        border-radius: 8px;
     }
-
+    
+    .product-image {
+        border-radius: 8px;
+    }
+    
+    .product-label {
+        top: 5px;
+        right: 5px;
+        padding: 2px 5px;
+    }
+    
+    .product-label-text {
+        font-size: 10px;
+        line-height: 14px;
+    }
+    
+    .product-details {
+        gap: 2px;
+        max-width: 70%; 
+    }
+    
     .product-name {
-        font-size: 20px; /* 从 24px 减小到 20px */
-        line-height: 27px; /* 相应调整行高，保持比例 (20 * 32/24) */
+        font-size: 12px;
+        line-height: 16px;
+        -webkit-line-clamp: 2; 
+        min-height: 32px; 
     }
-
+    
     .product-price {
-        font-size: 20px; /* 从 24px 减小到 20px */
-        line-height: 27px; /* 相应调整行高 */
+        font-size: 12px;
+        line-height: 16px;
+    }
+    
+    .product-add-button {
+        width: 24px;
+        height: 24px;
     }
 }

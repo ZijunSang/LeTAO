@@ -12,7 +12,7 @@
     width: 100%;
     margin-left: auto; 
     margin-right: auto; 
-    padding-bottom: 50px;
+    padding-bottom: 4%;
 }
 
 .equal-division {
@@ -22,13 +22,12 @@
   width: 100%;
   margin-left: auto; 
   margin-right: auto; 
-  padding-bottom: 50px;
-
+  padding-bottom: 4%;
 }
 
 .equal-division-item {
-  flex: 0 0 calc(50%-40px); 
-  max-width: calc(50% - 40px); 
+  flex: 0 0 calc(48%); 
+  max-width: calc(48%); 
   min-width: 45%;
   height: auto; 
   margin: 0; 
@@ -37,3 +36,4 @@
 .equal-division {
   justify-content: space-between; /* Already set, but this ensures items are pushed to the edges */
 }
+

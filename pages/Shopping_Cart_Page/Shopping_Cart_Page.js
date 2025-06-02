@@ -2,7 +2,7 @@ let cart = {
     items: [
       { id: 1, name: "Fromage Double", price: 43.99, quantity: 1, image: "../../src/logo/cheesecake.png" },
       { id: 2, name: "Chocolate Double", price: 43.99, quantity: 2, image: "../../src/logo/red.png" },
-      { id: 3, name: "Milk Roll", price: 43.99, quantity: 1, image: "../../src/logo/jersey_mild_roll.png" }
+      { id: 3, name: "Jersey Milk Roll", price: 43.99, quantity: 1, image: "../../src/logo/jersey_milk_roll.png" }
     ],
     total: 0
   };

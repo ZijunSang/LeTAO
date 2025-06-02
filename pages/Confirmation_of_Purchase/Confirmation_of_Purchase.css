@@ -20,12 +20,13 @@
   justify-content: center;
   position: relative;
   aspect-ratio: 4 / 3.3;
-  background-size: 100%}
+  background-size: 100%;
+}
 
 
 .confirmation-title {
   color: rgb(255, 255, 255);
-  font-size: clamp(120px,1.5vw,200px);
+  font-size: clamp(120px, 15vw, 200px);
   font-family: Jost;
   font-weight: 800;
   line-height: 1.1;
@@ -38,7 +39,7 @@
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
   padding: 25px 50px;
-  font-size: clamp(32px,1.5vw,40px);
+  font-size: clamp(32px, 5vw, 40px);
   font-family: Jost;
   font-weight: 300;
   line-height: 1;
@@ -53,4 +54,46 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* 添加对390px宽度的响应式支持 */
+@media (max-width: 390px) {
+  .main-content {
+    padding: 20px 0;
+  }
+  
+  .confirmation-message-container {
+    aspect-ratio: 4 / 4.5; /* 调整更高的长宽比，适合手机屏幕 */
+    background-size: cover; /* 确保背景图片完全覆盖容器 */
+  }
+  
+  .confirmation-title {
+    font-size: 48px; /* 固定大小，避免字体过大 */
+    margin: 0 10px; /* 添加水平边距 */
+  }
+  
+  .confirmation-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    margin-top: 20px; /* 增加与标题之间的间距 */
+  }
+  
+  /* 添加下面的滚动体验优化 */
+  html, body {
+    overflow-x: hidden;
+  }
+  
+  /* 优化触摸体验 */
+  .confirmation-button {
+    touch-action: manipulation; /* 优化触摸事件 */
+    -webkit-tap-highlight-color: transparent; /* 移除触摸高亮 */
+  }
+  
+  /* 确保内容在小屏幕上居中 */
+  .confirmation-message-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

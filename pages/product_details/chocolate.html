@@ -14,6 +14,7 @@
 
 <body>
   <div class="page">
+  <div class="page">
     <div class="flex-row justify-between items-center header-container">
       <a href="../Homepage/Homepage.html" class="header-logo-link"><span class="header-logo">LeTAO</span></a>
       <div class="flex-col justify-start nav-link-wrapper"><a href="../Homepage/Homepage.html"
@@ -26,9 +27,10 @@
           class="nav-link-anchor"><span class="nav-link-text">Signature Creations</span></a></div>
       <div class="flex-col justify-start nav-link-wrapper"><a href="../product_pages/Pastry_PAGE.html"
           class="nav-link-anchor"><span class="nav-link-text">Pastry</span></a></div>
-      <a href="../Shopping_Cart_Page/Shopping_Cart_Page.html"><img class="header-icon"
-          src="../../src/logo/cart.png" /></a>
-      <a href="../login/Login_Page.html"><img class="header-icon" src="../../src/logo/account.png" /></a>
+      <div class=header-icon-container>
+        <a href="../Shopping_Cart_Page/Shopping_Cart_Page.html"><img class="header-icon" src="../../src/logo/cart.png" /></a>
+        <a href="../login/Login_Page.html"><img class="header-icon" src="../../src/logo/account.png" /></a>
+      </div>
     </div>
 
     <div class="flex-col banner-container">
@@ -125,6 +127,99 @@
       localStorage.setItem('letaoCart', JSON.stringify(cart));
     }
   </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const productImages = document.querySelectorAll('.images > img');
+      if (productImages.length <= 1) return; 
+      
+      const carousel = document.createElement('div');
+      carousel.className = 'image-carousel';
+      
+      const carouselContainer = document.createElement('div');
+      carouselContainer.className = 'carousel-container';
+      
+      productImages.forEach(img => {
+        const slide = document.createElement('div');
+        slide.className = 'carousel-slide';
+        const newImg = document.createElement('img');
+        newImg.src = img.src;
+        newImg.alt = img.alt;
+        slide.appendChild(newImg);
+        carouselContainer.appendChild(slide);
+      });
+      
+      carousel.appendChild(carouselContainer);
+      
+      const dotsContainer = document.createElement('div');
+      dotsContainer.className = 'carousel-nav';
+      
+      for (let i = 0; i < productImages.length; i++) {
+        const dot = document.createElement('span');
+        dot.className = i === 0 ? 'carousel-dot active' : 'carousel-dot';
+        dot.dataset.index = i;
+        dot.addEventListener('click', () => {
+          currentSlide = i;
+          updateCarousel();
+        });
+        dotsContainer.appendChild(dot);
+      }
+      
+      carousel.appendChild(dotsContainer);
+      
+      const prevButton = document.createElement('button');
+      prevButton.className = 'carousel-prev';
+      prevButton.innerHTML = '&lt;';
+      prevButton.addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + productImages.length) % productImages.length;
+        updateCarousel();
+      });
+      
+      const nextButton = document.createElement('button');
+      nextButton.className = 'carousel-next';
+      nextButton.innerHTML = '&gt;';
+      nextButton.addEventListener('click', () => {
+        currentSlide = (currentSlide + 1) % productImages.length;
+        updateCarousel();
+      });
+      
+      carousel.appendChild(prevButton);
+      carousel.appendChild(nextButton);
+      
+      const imagesContainer = document.querySelector('.images');
+      imagesContainer.prepend(carousel);
+      
+      let currentSlide = 0;
+      
+      function updateCarousel() {
+        carouselContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+        
+        document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+          if (index === currentSlide) {
+            dot.classList.add('active');
+          } else {
+            dot.classList.remove('active');
+          }
+        });
+      }
+      
+      function toggleCarousel() {
+        if (window.innerWidth <= 390) {
+          carousel.style.display = 'block';
+          productImages.forEach((img, idx) => {
+            if (idx > 0) img.style.display = 'none';
+          });
+        } else {
+          carousel.style.display = 'none';
+          productImages.forEach(img => {
+            img.style.display = 'block';
+          });
+        }
+      }
+      
+      toggleCarousel();
+      window.addEventListener('resize', toggleCarousel);
+    });
+    </script>
 </body>
 
 </html>

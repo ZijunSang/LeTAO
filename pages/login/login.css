@@ -36,9 +36,47 @@
 }
 
 .store-image {
-    width: 50%;
+    width: 100%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 60px;
+}
+
+@media (max-width: 390px) {
+    .main-content {
+        padding: 30px 15px;
+    }
+    
+    .main-content h2 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+    
+    .input-box {
+        font-size: 16px;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .login-button {
+        padding: 12px 0;
+        font-size: 18px;
+        width: 160px;
+    }
+    
+    .login-form {
+        width: 100%;
+    }
+    
+    .input-box {
+        height: auto;
+        min-height: 45px;
+        box-sizing: border-box;
+    }
+    
+
+        .store-image {
+        max-width: 100%;
+        margin-top: 20px;
+    }
 }

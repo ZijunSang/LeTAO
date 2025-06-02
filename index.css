@@ -19,6 +19,20 @@ a {
   color: rgb(0, 0, 0);
 }
 
+@media (max-width: 390px) {
+  .path {
+    margin-left: 8px;
+    margin-top: 8px;
+  }
+  
+  .path_font {
+    font-size: 10px;
+    font-family: Jost;
+    line-height: 10px;
+    font-weight: 300;
+    color: rgb(0, 0, 0);
+  }
+}
 
 body {
   margin: 0;

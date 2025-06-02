@@ -1,5 +1,3 @@
-/* — Product Detail — */
-
 .product-detail {
   display: flex;
   flex-wrap: nowrap;    
@@ -82,6 +80,70 @@
   opacity: 0.9;
 }
 
+/* 添加图片轮播相关样式 */
+.image-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  flex: 1 0 100%;
+}
+
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.carousel-dot.active {
+  background-color: #000;
+}
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
 @media (max-width: 768px) {
   .product-detail {
     flex-direction: column;
@@ -95,5 +157,68 @@
   .images {
     flex-direction: column;
     gap: 16px;
+  }
+}
+
+@media (max-width: 390px) {
+  .product-detail {
+    padding: 10px;
+  }
+  
+  .details {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+  
+  .details h1 {
+    font-size: 24px;
+  }
+  
+  .price {
+    font-size: 20px;
+  }
+  
+  .details p {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .check-availability {
+    font-size: 16px;
+    padding-top: 10px;
+  }
+  
+  .origin {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  
+  .btn-add {
+    padding: 12px;
+    font-size: 18px;
+  }
+  
+  .image-carousel {
+    margin-bottom: 15px;
+  }
+  
+  .carousel-prev,
+  .carousel-next {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+  
+  .images > img:not(:first-child) {
+    display: none;
+  }
+  
+】  .images .image-carousel {
+    display: block;
+  }
+  
+  .carousel-dot {
+    width: 8px;
+    height: 8px;
   }
 }
